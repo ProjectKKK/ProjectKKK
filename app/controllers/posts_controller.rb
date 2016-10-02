@@ -1,5 +1,4 @@
-class PostController < ApplicationController
-
+class PostsController < ApplicationController
 	def new
 		@post = Post.new	
 	end
@@ -22,3 +21,5 @@ class PostController < ApplicationController
 		params.require(:post).permit(:image, :movie, :name, :description, :where)
 	end
 end
+
+
