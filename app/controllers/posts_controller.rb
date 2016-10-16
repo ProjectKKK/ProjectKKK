@@ -15,7 +15,7 @@ attr_reader
 
 
 	def index
-		@posts = Post.all
+		@posts = Post.all.reverse_order
 	end
 
 
