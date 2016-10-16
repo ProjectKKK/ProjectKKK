@@ -36,6 +36,11 @@ gem 'twitter-bootstrap-rails'
 gem 'carrierwave'
 gem 'rmagick'
 
+#gem 'streamio-ffmpeg'
+
+	
+gem 'flowplayer', git: 'git://github.com/scottdavis/flowplayer-gem.git'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
