@@ -1,0 +1,11 @@
+<h1>vote一覧</h1>
+
+<% if @user.vote.empty? %>
+  <p>nothing</p>
+<% end %>
+
+<% @user.vote.map {|v| v.post}.each do |post| %>
+  <%= link_to post.user.name, user_path(post.user) %>
+  <%= post.user.name %>
+  <%= post.body %>
+<% end %>

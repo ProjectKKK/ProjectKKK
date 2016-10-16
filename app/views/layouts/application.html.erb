@@ -8,7 +8,26 @@
 </head>
 <body>
 
-<%= yield %>
+	<header>
+	  <nav class="navbar navbar-inverse navbar-static-top">
+		  <div class="container-fluid">
+				
+			  <div class="navbar-header">
+				  <a class="navbar-brand">Poi'!</a>
+			  </div>
+			    <div class="collapse navbar-collapse navbar-right" id="navbarExmple1">
+				  <ul class="nav navbar-nav">
+					  <li><%= link_to "Poi'!する","/posts/new" %></li>
+					  <li><%= link_to "Login","/users/sign_in" %></li>
+				  </ul>
+			  </div>
+		  </div>
+	  </nav>
+	</header>
+
+  <div class="container">
+	  <%= yield %>
+  </div>
 
 </body>
 </html>
