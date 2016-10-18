@@ -31,6 +31,7 @@ gem 'devise'
 gem 'therubyracer' #bootstrap
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+gem 'devise-bootstrap-views'
 
 
 gem 'carrierwave'

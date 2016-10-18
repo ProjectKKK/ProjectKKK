@@ -10,6 +10,7 @@ attr_reader
 	def create
 		@post = Post.new(post_params)
 		@post.save
+		@post.user_id = current_user.id
 		redirect_to '/posts', notice: '投稿が、保存されました！'
 	end
 
@@ -49,7 +50,7 @@ attr_reader
 	private
 
 	def post_params
-		params.require(:post).permit(:image, :movie, :name, :description, :where, :post_id)
+		params.require(:post).permit(:image, :movie, :name, :description, :where, :post_id, :user_id)
 	end
 end
 

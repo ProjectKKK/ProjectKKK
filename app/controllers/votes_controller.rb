@@ -2,7 +2,7 @@ class VotesController < ApplicationController
 	before_action :authenticate_user!
 	def create
 		@post=Post.find(params[:post_id])
-		@vote=current_user.vote.build(post: @post)
+		@vote=current_user.votes.build(post: @post)
 
 		if @vote.save
 			redirect_to posts_url, notice: "いいね！しました"
@@ -12,7 +12,7 @@ class VotesController < ApplicationController
 	end
 
 	def destroy
-		@vote=current_user.vote.find_by!(post_id: params[:post_id])
+		@vote=current_user.votes.find_by!(post_id: params[:post_id])
 		@vote.destroy
 		redirect_to posts_url, notice: "いいね！を削除しました"
 	end
