@@ -12,8 +12,55 @@
  *
  *= require_tree .
  *= require_self
- */
+  */
 
- .navbar-brand{
- 	text-align: center;
+  *= require devise-bootstrap-views
+
+
+ body{
+ 	font-family: 'Lucida Console';
  }
+
+ .logo{
+ 	font-family: 'Bookman Old Style';
+ }
+
+.navbar-top{
+	height:60px;
+	box-shadow: 0 0 6px 2px rgba(0,0,0,0.3);
+}
+
+.navbar-bottom{
+	height:150px;
+	margin-top: 70px;
+	margin-bottom: 0; 
+	box-shadow: 0 10px 0 2px rgba(0,0,0,0.3);
+}
+
+h1{
+	position: absolute;
+	left:50%;
+	margin-top: 10px;
+}
+
+#navbarExmple1 li{
+	padding: 15px;
+}
+
+#navbarExmple1 a{
+	padding: 0;
+	transition: .2s;
+}
+
+a{
+	transition: .2s;
+}
+
+a:hover {
+	text-decoration: none;
+	transform: rotate(10deg);
+}
+
+div.col-md-3{
+	background-color: gray;
+}

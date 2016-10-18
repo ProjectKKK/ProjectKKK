@@ -3,13 +3,14 @@ Rails.application.routes.draw do
 
   get 'users/show'
   post '/posts' => 'posts#create'
-  root 'posts#show'
+  
+  root 'posts#index'
 
   devise_for :users
 
-  resources :users, only:[:index,:show] do
-    get :favorites, on: :member
-  end
+  # resources :users, only:[:index,:show] do
+  #   get :votes, on: :user
+  # end
 
   resources :posts do
     resource :vote,:comments, only:[:create,:destroy]
