@@ -8,7 +8,6 @@ class CreatePosts < ActiveRecord::Migration
       t.text :description
       t.string :where
 
-
       t.timestamps null: false
     end
   end
