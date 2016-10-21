@@ -44,6 +44,8 @@ gem 'acts-as-taggable-on', '~> 3.4'
 	
 gem 'flowplayer', git: 'git://github.com/scottdavis/flowplayer-gem.git'
 
+gem 'bootstrap-tagsinput-rails'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

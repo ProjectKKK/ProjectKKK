@@ -49,6 +49,8 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-tagsinput-rails (0.4.2.1)
+      railties (>= 3.1)
     builder (3.2.2)
     byebug (9.0.5)
     carrierwave (0.11.2)
@@ -200,6 +202,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 3.4)
+  bootstrap-tagsinput-rails
   byebug
   carrierwave
   coffee-rails (~> 4.1.0)

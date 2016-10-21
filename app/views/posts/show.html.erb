@@ -5,6 +5,7 @@
 			<th style="letter-spacing:12px;">商品名</th>
 			<th>説明</th>
 			<th>URL</th>
+			<th>タグ</th>
 			<th></th>
 			<th>コメントする</th>
 		</tr>
@@ -13,6 +14,7 @@
 			<td><%= video_tag @post.movie, :movie, :controls => true, :size => "200x200" %></td>
 			<td><%= @post.name %></td>
 			<td><%= @post.description %></td>
+			<td><%= render 'posts/tag_list', tag_list: @post.category_list %></td>
 			<td><%= link_to '商品情報(サイトに移ります)', @post.where %></td>
 			<td><%= link_to "一覧画面へ", posts_path(@post), class: "btn btn-success" %>
 				<%= link_to "編集する", edit_post_path(@post), class: "btn btn-warning" %>		
