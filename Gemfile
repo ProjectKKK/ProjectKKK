@@ -39,6 +39,8 @@ gem 'rmagick'
 
 #gem 'streamio-ffmpeg'
 
+
+gem 'acts-as-taggable-on', '~> 3.4'
 	
 gem 'flowplayer', git: 'git://github.com/scottdavis/flowplayer-gem.git'
 

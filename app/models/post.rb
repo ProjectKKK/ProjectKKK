@@ -10,4 +10,10 @@ class Post < ActiveRecord::Base
 	def voted_by? user
 	  votes.where(user_id: @user.id).exists?
 	end
+
+	acts_as_taggable_on :tags
+	acts_as_taggable
+	acts_as_ordered_taggable_on :category
+	# @post.tag_list.add("life", "interior", "hobby", "electric", "outdoor", "vehicle", "others")
+
 end
