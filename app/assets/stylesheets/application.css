@@ -69,6 +69,26 @@ div.col-md-3{
 	background-color: gray;
 }
 
+
 .list-group{
     border : 3px solid #84b2e0;
+}
+
+div.watermark2{
+	width: 100%;
+	height: 235px;
+	background-image:url('watermark2.jpg');
+	display: block;
+
+}
+
+footer{
+	width: 100%;
+	height: 300px;
+	border-top: 1px #ddd solid;
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+	background-color: gray;
+	display: block;
 }

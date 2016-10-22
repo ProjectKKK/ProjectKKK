@@ -10,6 +10,6 @@ class UsersController < ApplicationController
   end
 
   def vote
-  	@user = User.find(params[:id])
+  	@user = User.find(params[:post_id])
   end
 end
