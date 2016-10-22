@@ -1,0 +1,36 @@
+	<% if flash[:notice] %>
+	  <div class="alert alert-success">
+	    <%= notice %>
+	  </div>
+	<% end %>
+	  <table>
+		<tr>
+			<th>画像</th>
+			<th>動画</th>
+			<th style="letter-spacing:12px;">商品名</th>
+			<th>説明</th>
+			<th>URL</th>
+			<th>タグ</th>
+			<th></th>
+			
+		</tr>
+
+	    <% @posts.each do |post| %>
+		
+		<tr>
+			<td><%= image_tag post.image.url %></td>
+			<td><%= video_tag post.movie, :movie, :controls => true, :size => "200x200" %>
+            </td>
+			<td><%= post.name %></td>
+			
+			<td><%= post.description %></td>
+			<td><%= link_to '商品情報(サイトに移ります)', post.where %></td>
+			<td><%= render 'posts/tag_list', tag_list: post.category_list, post.tag_list => ["life", "tips", "hardware"] %></td>
+			<td><%= link_to "詳細", post_path(post), class: "btn btn-success" %>
+			    <%= link_to "編集", edit_post_path(post), class: "btn btn-warning" %>		
+				<%= link_to "削除", post_path(post), method: "delete", class: "btn btn-danger" %></td>
+			</tr>
+
+
+	    <% end %>
+	</table>

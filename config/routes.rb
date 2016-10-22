@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get 'posts/category/life' => 'posts#life'
+
   # resources :users, only:[:index,:show] do
   #   get :votes, on: :user
   # end

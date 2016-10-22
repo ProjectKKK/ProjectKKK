@@ -22,15 +22,19 @@ class Post < ActiveRecord::Base
     validates :where, presence: true
     validates :category_list, presence: true
 
-    validate :add_error_message
 
-  def add_error_message
-    # nameが空のときにエラーメッセージを追加する
-    if name.empty?
-      errors.add(:name, "に関係するエラーを追加")
-      errors[:base] << "モデル全体に関係するエラーを追加"
-    end
-  end
+
+
+# エラーメッセージをカスタムしたいときに使うといい！
+
+#     validate :add_error_message
+#   def add_error_message
+#     # nameが空のときにエラーメッセージを追加する
+#     if name.empty?
+#       errors.add(:name, "に関係するエラーを追加")
+#       errors[:base] << "モデル全体に関係するエラーを追加"
+#     end
+#   end
 
 
 end
