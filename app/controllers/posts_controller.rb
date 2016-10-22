@@ -23,7 +23,7 @@ attr_reader
 
 	def show
 		@post = Post.find(params[:id])
-		
+
 	end
 
 
@@ -52,7 +52,7 @@ attr_reader
 	private
 
 	def post_params
-		params.require(:post).permit(:image, :movie, :name, :description, :where, :post_id, :user_id, :category_list)
+		params.require(:post).permit(:image, :movie, :name, :description, :where, :post_id, :user_id, :category_list, :add_error)
 	end
 end
 
