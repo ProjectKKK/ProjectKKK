@@ -9,10 +9,14 @@ attr_reader
 
 	def create
 		@post = Post.new(post_params)
-		@post.save
 		@post.user_id = current_user.id
 		@post.tag_list.add("life", "interior", "hobby", "electric", "outdoor", "vehicle", "others")
-		redirect_to '/posts', notice: 'Poi’!されました'
+		if @post.save
+		   redirect_to '/posts', notice: 'Poi’!されました'
+		else
+			render :new
+		end
+			
 	end
 
 
@@ -23,7 +27,7 @@ attr_reader
 
 	def show
 		@post = Post.find(params[:id])
-		
+
 	end
 
 
@@ -45,6 +49,10 @@ attr_reader
 		redirect_to '/posts', notice: 'Poi’!が、削除されました'
 	end
 
+	def life
+		@posts = Post.all.reverse_order
+	end
+
 
 
 
@@ -52,7 +60,7 @@ attr_reader
 	private
 
 	def post_params
-		params.require(:post).permit(:image, :movie, :name, :description, :where, :post_id, :user_id, :category_list)
+		params.require(:post).permit(:image, :movie, :name, :description, :where, :post_id, :user_id, :category_list, :add_error)
 	end
 end
 
