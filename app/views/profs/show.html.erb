@@ -1,0 +1,26 @@
+<h2>プロフィール</h2>
+
+
+
+  	<label>名前</label>
+  		<h3><%= @prof.name %></h3>
+    
+
+　　	<label>性別</label>
+ 		<h3><%= @prof.gender == 0 ? "男" : "女" %></h3>
+
+ 　　 <label>年齢</label>
+ 		<h3><%= @prof.age %></h3>
+
+ 　　 <label>住まい</label>
+ 		<h3><%= @prof.live %></h3>
+
+ 　 	<label>自己紹介</label>
+ 		<h3><%= @prof.introduce %></h3>
+
+
+
+  	<% if current_user.id == @prof.user.id %>
+　　		<p><%= link_to 'プロフィール編集', edit_prof_path(@prof) %></p>
+  	<% end %>
+
