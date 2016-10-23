@@ -48,6 +48,7 @@ gem 'bootstrap-tagsinput-rails'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+gem 'jquery-turbolinks'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -35,7 +35,9 @@
 	<h2>このPoi'に対するコメント</h2>
 	<% @post.comments.each do |comment| %>
 	<div class="panel panel-default">
+
 		<div class="panel-heading"><%= comment.commenter %> さん</div>
+
 		<div class="panel-body"><strong><%= comment.body %></strong></div>
 	</div>
 	<% end %>

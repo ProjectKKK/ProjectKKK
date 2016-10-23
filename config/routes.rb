@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
 
+  get 'tag/life' => 'tag#life'
+
+  get 'tag/interior' => 'tag#interior'
+
+  get 'tag/hobby' => 'tag#hobby'
+
+  get 'tag/electric' => 'tag#electric'
+
+  get 'tag/outdoor' => 'tag#outdoor'
+
+  get 'tag/vehicle' => 'tag#vehicle'
+
+  get 'tag/others' => 'tag#others'
+
+
+
   get 'users/index'
 
   get 'users/show'
