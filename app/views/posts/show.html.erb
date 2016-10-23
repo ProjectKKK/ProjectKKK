@@ -7,15 +7,14 @@
 			<th>URL</th>
 			<th>タグ</th>
 			<th></th>
-			<th>コメントする</th>
 		</tr>
 		<tr>
 			<td><%= image_tag @post.image.url %></td>
 			<td><%= video_tag @post.movie, :movie, :controls => true, :size => "200x200" %></td>
 			<td><%= @post.name %></td>
 			<td><%= @post.description %></td>
-			<td><%= render 'posts/tag_list', tag_list: @post.category_list %></td>
 			<td><%= link_to '商品情報(サイトに移ります)', @post.where %></td>
+			<td><%= render 'posts/tag_list', tag_list: @post.category_list %></td>
 			<td><%= link_to "一覧画面へ", posts_path(@post), class: "btn btn-success" %>
 				<%= link_to "編集する", edit_post_path(@post), class: "btn btn-warning" %>		
 				<%= link_to "削除する", post_path(@post), method: "delete", class: "btn btn-danger" %>
@@ -27,8 +26,7 @@
 					 <%= link_to "like♡", post_votes_path(@post), method: :post, class: "btn btn-info" %>  
 	            	<% end %>           	
 	            <% end %>
-			</td>
-			<td></td>	
+			</td>	
 		</tr>
 	</table>
 
