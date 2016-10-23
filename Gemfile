@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -45,13 +45,7 @@ gem 'flowplayer', git: 'git://github.com/scottdavis/flowplayer-gem.git'
 
 gem 'bootstrap-tagsinput-rails'
 
-
-
-
 gem 'devise'
-
-
-
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -68,7 +62,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  gem 'sqlite3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
@@ -77,4 +71,14 @@ group :development, :test do
   gem 'hirb'         # モデルの出力結果を表形式で表示するGem
   gem 'hirb-unicode' # 日本語などマルチバイト文字の出力時の出力結果のずれに対応
 end
+
+group :production do\
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
+
+
+
+
 
