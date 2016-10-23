@@ -2,14 +2,14 @@
 ja:
   activerecord:
     models:
-      user: 
+      post: 記事
     attributes:
-        image: "画像"
-        name: "商品名"
-        description: "説明文"
-        where: "URL"
-        category_list: "タグ"
-
+      post:
+        image: 画像
+        name: 商品名
+        description: 説明文
+        where: URL
+        category_list: タグ
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
