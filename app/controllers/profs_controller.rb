@@ -45,3 +45,4 @@ class ProfsController < ApplicationController
 	end
 
 end
+
