@@ -28,7 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 
 gem 'therubyracer' #bootstrap
-gem 'less-rails'
+# gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 
