@@ -35,7 +35,7 @@
 	<h2>このPoi'に対するコメント</h2>
 	<% @post.comments.each do |comment| %>
 	<div class="panel panel-default">
-		<div class="panel-heading"><%= comment.commmenter %></div>
+		<div class="panel-heading"><%= comment.commenter %></div>
 		<div class="panel-body"><strong><%= comment.body %></strong></div>
 	</div>
 	<% end %>
@@ -46,7 +46,7 @@
 			<%= form_for([@post,@post.comments.build]) do |f| %>
 				<div class="form-group">
 					<%= f.label "name" %><br>
-					<%= f.text_field :commmenter %>
+					<%= f.text_field :commenter %>
 				</div>
 					
 				<div class="form-group">
