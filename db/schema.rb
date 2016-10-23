@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 20161020132448) do
     t.text     "introduce"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "image"
+    t.integer  "user_id"
   end
 
   create_table "taggings", force: :cascade do |t|
