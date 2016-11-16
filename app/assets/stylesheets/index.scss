@@ -1,3 +1,4 @@
+
 table th{
   color: #fff;
   background-color: #0066ff;
@@ -38,4 +39,11 @@ table tr td{
   text-align: center;
   padding: 5px;
 }
+
+@media screen and (max-width: 480px){
+  .braind{
+    display: none;
+  }
+}
+
 

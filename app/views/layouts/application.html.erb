@@ -5,6 +5,9 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" media="(max-width: 480px)" href="media-query-mobile.scss">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
 </head>
 <body style="padding-top: 90px;,font-family: 'Lucida Console';">
 
@@ -24,7 +27,7 @@
 				      <ul class="nav navbar-nav">
 				      	<% if user_signed_in? %>
 					     <li><%= link_to "Poi'!する","/posts/new" %></li>
-					     <li><%= link_to current_user.email, new_prof_path %>さん、こんにちは</li>
+					     <li><%= link_to current_user.email, new_prof_path %>こんにちは</li>
 					     <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
 					    <% else %>
 					     <li><%= link_to "ログイン","/users/sign_in" %></li>
@@ -56,7 +59,7 @@
 
   <div class="watermark2"></div>
   <footer>
-  	2016 ProjectK,Inc.ALL rights reserved
+  	2016 ProjectK,Inc. ALL Rights Reserved
   </footer>
 
   </div>
